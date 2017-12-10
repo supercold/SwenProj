@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>{{ staff.name }}</h1>
+  <dl class="list">
+    <dt>ID Number</dt>
+    <td>{{ staff.idnum }}</td>
+    <dt>Date-Of-Birth</dt>
+    <td>{{ staff.dateofbirth }}</td>
+    <dt>Bank Account</dt>
+    <td>{{ staff.bankaccount }}</td>
+    <dt>Home Address</dt>
+    <td>{{ staff.address }}</td>
+    <dt>Phone Number</dt>
+    <td>{{ staff.number }}</td>
+    <dt>Duty and Position</dt>
+    <td>{{ staff.position }}</td>    
+  </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/staff-edit', staff._id]" class="btn btn-success">EDIT</a>
+      <button class="btn btn-danger" type="button" (click)="deleteStaff(staff._id)">DELETE</button>
+      
+    </div>
+  </div>
