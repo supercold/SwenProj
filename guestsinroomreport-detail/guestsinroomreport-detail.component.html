@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>{{ guest.title }}</h1>
+  <dl class="list">
+    <dt>RoomID</dt>
+    <dd>{{ guest.roomid }}</dd>
+    <dt>Occupancy</dt>
+    <dd>{{ guest.numberofpeople }}</dd>
+    <dt>Booked By</dt>
+    <dd>{{ guest.bookedby }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/guest-edit', guest._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteGuest(guest._id)">DELETE</button>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Booking = require('../models/Booking.js');
+var Weekly = require('../models/Weekly.js');
 
 
 router.get('/', function(req, res, next) {
-  Booking.find(function (err, products) {
+  Weekly.find(function (err, products) {
     if (err) return next(err);
     res.json(products);
   });
@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/:id', function(req, res, next) {
-  Booking.findById(req.params.id, function (err, post) {
+  Weekly.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -21,7 +21,7 @@ router.get('/:id', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
-  Booking.create(req.body, function (err, post) {
+  Weekly.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
 
 
 router.put('/:id', function(req, res, next) {
-  Booking.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Weekly.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -37,7 +37,7 @@ router.put('/:id', function(req, res, next) {
 
 
 router.delete('/:id', function(req, res, next) {
-  Booking.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Weekly.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

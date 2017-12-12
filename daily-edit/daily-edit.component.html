@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Edit Daily</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateDaily(daily._id)" #dailyForm="ngForm">
+        <div class="form-group">
+          <label for="name">Day</label>
+          <input type="text" class="form-control" [(ngModel)]="daily.Day" name="day" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Room</label>
+          <input type="text" class="form-control" [(ngModel)]="daily.RoomID" name="room" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Occupancy</label>
+          <input type="number" class="form-control" [(ngModel)]="daily.Occupancy" name="occupancy" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!dailyForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

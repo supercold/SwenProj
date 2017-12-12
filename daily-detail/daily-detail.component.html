@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>{{ daily.title }}</h1>
+  <dl class="list">
+    <dt>Day</dt>
+    <td>{{ daily.Day }}</td>
+    <dt>Room</dt>
+    <td>{{ daily.RoomID }}</td>
+    <dt>Occupancy</dt>
+    <td>{{ daily.Occupancy }}</td>
+    <dt>Update Date</dt>
+    <dd>{{ daily.updated_at }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/daily-edit', daily._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteDaily(daily._id)">DELETE</button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Guests
+    <a [routerLink]="['/guest-create']" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true">New Guest in Room</span>
+    </a>
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>RoomID</th>
+        <th>Number Of People</th>
+        <th>Booked By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let guest of guests">
+        <td>{{ guest.roomid }}</td>
+        <td>{{ guest.numberofpeople }}</td>
+        <td>{{ guest.bookedby }}</td>
+        <td><a [routerLink]="['/guest-details', guest._id]">Show Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

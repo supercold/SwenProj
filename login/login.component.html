@@ -1,0 +1,29 @@
+<div style="text-align:center">
+  <h1>
+    Login account
+  </h1>
+  <p>Login to your account here </p>
+</div>
+    <br>
+    <br>
+<form [formGroup]="myForm1" novalidate (ngSubmit)="onSubmit(myForm1)">
+<div class="container"> 
+  <div class="row">
+        <label for="username">Username: </label><input type="username" formControlName="username" id="username" placeholder="username">
+  </div>
+<br>
+  <div class="row">
+        <label for="password">Password: </label><input type="password" formControlName="password" id="password" placeholder="password" >
+</div>
+
+<div class="row">
+    <div style="text-align: center">
+     <p><button class="btn btn-primary" type="submit" [disabled]="!myForm1.valid" >Login Now</button></p> 
+     <p>Don't have an account? <a routerLink="/signup">Register Here</a></p>
+ </div>
+  </div>
+</div>
+</form>
+  <div *ngIf="edited1" class="alert alert-success box-msg" role="alert">
+      <strong>Login Successful!</strong> You have successfully login to your account, {{thisone1}}.
+</div>

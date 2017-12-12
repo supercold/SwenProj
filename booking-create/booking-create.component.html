@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Add New Booking</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveBooking()" #bookingForm="ngForm">
+        <div class="form-group">
+          <label for="name">Room</label>
+          <input type="text" class="form-control" [(ngModel)]="booking.selected_room" name="selected_room" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Customer Name</label>
+          <input type="text" class="form-control" [(ngModel)]="booking.customer_name" name="customer_name" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Number of People</label>
+          <input type="number" class="form-control" [(ngModel)]="booking.numberofpeople" name="num_of_people" required>
+        </div>
+        <div class="form-group">
+          <label for="name">NRIC</label>
+          <input type="text" class="form-control" [(ngModel)]="booking.customer_nric" name="nric" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Phone Number</label>
+          <input type="number" class="form-control" [(ngModel)]="booking.phonenumber" name="phonenum" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Check In Date</label>
+          <input type="date" class="form-control" [(ngModel)]="booking.checkindate" name="check_in_date" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Check In Date</label>
+          <input type="date" class="form-control" [(ngModel)]="booking.checkoutdate" name="check_out_date" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!bookingForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

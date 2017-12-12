@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Daily Reports
+    <a [routerLink]="['/daily-create']" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true">Make New Daily Report</span>
+    </a>
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Room</th>
+        <th>Occupancy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let daily of dailys">
+        <td>{{ daily.Day }}</td>
+        <td>{{ daily.RoomID }}</td>
+        <td>{{ daily.Occupancy }}</td>
+        <td><a [routerLink]="['/daily-details', daily._id]">Show Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ housekeeping.Name }}</h1>
+  <dl class="list">
+      <dt>Position</dt>
+      <dd>{{ housekeeping.Position }}</dd>
+      <dt>Duties</dt>
+      <dd>{{ housekeeping.Duties }}</dd>
+      <dt>Working Status</dt>
+      <dd>{{ housekeeping.Workingstatus }}</dd>
+      <dt>Break Time</dt>
+      <dd>{{ housekeeping.Breaktime }}</dd>
+      <dd>Leave Application</dd>
+      <dt>{{ housekeeping.Leaveapplication }}</dt>  
+      
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/housekeeping-edit', housekeeping._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteHousekeeping(housekeeping._id)">DELETE</button>
+  </div>
+</div>

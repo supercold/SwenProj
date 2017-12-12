@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Schedule = require('../models/Schedule.js');
 
-/* GET ALL BOOKS */
+
 router.get('/', function(req, res, next) {
   Schedule.find(function (err, products) {
     if (err) return next(err);
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* GET SINGLE BOOK BY ID */
+
 router.get('/:id', function(req, res, next) {
   Schedule.findById(req.params.id, function (err, post) {
     if (err) return next(err);
@@ -19,7 +19,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* SAVE BOOK */
+
 router.post('/', function(req, res, next) {
   Schedule.create(req.body, function (err, post) {
     if (err) return next(err);
@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* UPDATE BOOK */
+
 router.put('/:id', function(req, res, next) {
   Schedule.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
@@ -35,7 +35,7 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-/* DELETE BOOK */
+
 router.delete('/:id', function(req, res, next) {
   Schedule.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);

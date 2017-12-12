@@ -1,0 +1,32 @@
+<div style="text-align:center">
+    <h1>
+      Create new feedback
+    </h1>
+    <p>Create new feedback here </p>
+  </div>
+      <br>
+      <br>
+  <form [formGroup]="myForm" novalidate (ngSubmit)="onSubmit(myForm)">
+  <div class="container"> 
+    <div class="row">
+          <label for="name">Customer Name: </label><input type="username" formControlName="customername" id="customername" placeholder="customername">
+    </div>
+  <br>
+    <div class="row">
+          <label for="name">Period of Stay: </label><input type="username" formControlName="periodofstay" id="periodofstay" placeholder="periodofstay" >
+  </div>
+    <br> 
+    <div class="row">
+          <label for="name">Feedback: </label><input type="username" formControlName="feedback" id="feedback" placeholder="feedback">
+  </div>
+    <br>
+     <div class="row">
+       <div style="text-align: center">
+        <p><button class="btn btn-primary" type="submit" [disabled]="!myForm.valid" >Feedback</button> </p>
+    </div>
+     </div>
+    </div>
+  </form>
+  <div *ngIf="edited" class="alert alert-success box-msg" role="alert">
+          <strong>Feedback Successfully sent!</strong> 
+  </div>
