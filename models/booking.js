@@ -1,12 +1,13 @@
 var mongoose = require('mongoose');
 
 var BookingSchema = new mongoose.Schema({
-  isbn: String,
-  title: String,
-  author: String,
-  publisher: String,
-  published_date: Date,
-  price: Number,
+  selected_room: String,
+  customer_name: String,
+  numberofpeople: Number,
+  customer_nric: String,
+  phonenumber: Number,
+  checkindate: Date,
+  checkoutdate: Date,
   updated_at: { type: Date, default: Date.now },
 });
 

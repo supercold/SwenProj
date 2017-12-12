@@ -1,12 +1,11 @@
 var mongoose = require('mongoose');
 
 var ScheduleSchema = new mongoose.Schema({
-  isbn: String,
-  title: String,
-  author: String,
-  publisher: String,
-  published_date: Date,
-  price: Number,
+  RoomID: String,
+  InCharge: String,
+  Status: String,
+  Cleanedtime: String,
+  donotdisturb: String,
   updated_at: { type: Date, default: Date.now },
 });
 
