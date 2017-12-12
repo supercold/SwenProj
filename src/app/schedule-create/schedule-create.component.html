@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Add New Schedule</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveSchedule()" #scheduleForm="ngForm">
+        <div class="form-group">
+          <label for="name">ISBN</label>
+          <input type="text" class="form-control" [(ngModel)]="schedule.isbn" name="isbn" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="schedule.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Author</label>
+          <input type="text" class="form-control" [(ngModel)]="schedule.author" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Publisher</label>
+          <input type="text" class="form-control" [(ngModel)]="schedule.publisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Price</label>
+          <input type="number" class="form-control" [(ngModel)]="schedule.price" name="price" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!scheduleForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

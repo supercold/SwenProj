@@ -11,6 +11,17 @@ import { routing } from 'app/app.routing';
 import { StaffDetailComponent } from './staff-detail/staff-detail.component';
 import { StaffCreateComponent } from './staff-create/staff-create.component';
 import { StaffEditComponent } from './staff-edit/staff-edit.component';
+import { BookingService } from 'app/booking.service';
+import { BookingComponent } from './booking/booking.component';
+import { BookingDetailComponent } from './booking-detail/booking-detail.component';
+import { BookingCreateComponent } from './booking-create/booking-create.component';
+import { BookingEditComponent } from './booking-edit/booking-edit.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ScheduleDetailComponent } from './schedule-detail/schedule-detail.component';
+import { ScheduleCreateComponent } from './schedule-create/schedule-create.component';
+import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
+import { ScheduleService } from 'app/schedule.service';
+import { ReportsComponent } from './reports/reports.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +29,16 @@ import { StaffEditComponent } from './staff-edit/staff-edit.component';
     StaffComponent,
     StaffDetailComponent,
     StaffCreateComponent,
-    StaffEditComponent
+    StaffEditComponent,
+    BookingComponent,
+    BookingDetailComponent,
+    BookingCreateComponent,
+    BookingEditComponent,
+    ScheduleComponent,
+    ScheduleDetailComponent,
+    ScheduleCreateComponent,
+    ScheduleEditComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +46,7 @@ import { StaffEditComponent } from './staff-edit/staff-edit.component';
     HttpModule,
     routing
   ],
-  providers: [StaffService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [StaffService, BookingService, ScheduleService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
