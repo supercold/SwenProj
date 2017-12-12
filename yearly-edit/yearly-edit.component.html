@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Edit Yearly</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateYearly(yearly._id)" #yearlyForm="ngForm">
+        <div class="form-group">
+          <label for="name">Year</label>
+          <input type="text" class="form-control" [(ngModel)]="yearly.Year" name="Year" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Room ID</label>
+          <input type="text" class="form-control" [(ngModel)]="yearly.RoomID" name="RoomID" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Occupancy</label>
+          <input type="number" class="form-control" [(ngModel)]="yearly.Occupancy" name="Occupancy" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!yearlyForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

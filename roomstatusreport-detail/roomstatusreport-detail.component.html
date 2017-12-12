@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>{{ status.RoomID }}</h1>
+  <dl class="list">
+    <dt>RoomID</dt>
+    <td>{{ status.RoomID }}</td>
+    <dt>Occupancy</dt>
+    <td>{{ status.Occupancy }}</td>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/status-edit', status._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteStatus(status._id)">DELETE</button>
+  </div>
+</div>

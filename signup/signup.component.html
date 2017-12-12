@@ -1,0 +1,36 @@
+<div style="text-align:center">
+  <h1>
+    Create new account
+  </h1>
+  <p>Register for a new account here </p>
+</div>
+    <br>
+    <br>
+<form [formGroup]="myForm" novalidate (ngSubmit)="onSubmit(myForm)">
+<div class="container"> 
+  <div class="row">
+        <label for="name">Username: </label><input type="username" formControlName="username" id="username" placeholder="username">
+  </div>
+<br>
+  <div class="row">
+        <label for="email">Email: </label><input type="email" formControlName="email" id="email" placeholder="email" >
+</div>
+  <br> 
+  <div class="row">
+        <label for="password">Password: </label><input type="password" formControlName="password" id="password" placeholder="password">
+</div>
+  <br>
+  <div class="row">
+    <label for="repassword">Retype Password: </label><input type="password" formControlName="repassword" id="repassword" placeholder="retype password">
+</div>
+<br>
+   <div class="row">
+     <div style="text-align: center">
+      <p><button class="btn btn-primary" type="submit" [disabled]="!myForm.valid" >Register</button> </p>
+  </div>
+   </div>
+  </div>
+</form>
+<div *ngIf="edited" class="alert alert-success box-msg" role="alert">
+        <strong>Registration Successful!</strong> Please logon to your registered account in the Login page, {{thisone}}.
+</div>

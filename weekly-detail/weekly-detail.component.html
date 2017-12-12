@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>{{ weekly.Week }}</h1>
+  <dl class="list">
+    <dt>Week</dt>
+    <dd>{{ weekly.Week }}</dd>
+    <dt>RoomID</dt>
+    <dd>{{ weekly.RoomID }}</dd>
+    <dt>Occupancy</dt>
+    <dd>{{ weekly.Occupancy }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/weekly-edit', weekly._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteWeekly(weekly._id)">DELETE</button>
+  </div>
+</div>
