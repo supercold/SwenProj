@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Add New Guest</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveGuest()" #guestForm="ngForm">
+        <div class="form-group">
+          <label for="name">Room</label>
+          <input type="text" class="form-control" [(ngModel)]="guest.roomid" name="roomid" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Number Of People</label>
+          <input type="number" class="form-control" [(ngModel)]="guest.numberofpeople" name="numberofpeople" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Booked By</label>
+          <input type="text" class="form-control" [(ngModel)]="guest.bookedby" name="bookedby" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!guestForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

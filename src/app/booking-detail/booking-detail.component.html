@@ -1,21 +1,25 @@
 <div class="container">
-  <h1>{{ booking.title }}</h1>
+  <h1>{{ booking.customer_name }}</h1>
   <dl class="list">
-    <dt>ISBN</dt>
-    <dd>{{ booking.isbn }}</dd>
-    <dt>Author</dt>
-    <dd>{{ booking.author }}</dd>
-    <dt>Publisher</dt>
-    <dd>{{ booking.publisher }}</dd>
-    <dt>Price</dt>
-    <dd>{{ booking.price }}</dd>
-    <dt>Update Date</dt>
-    <dd>{{ booking.updated_at }}</dd>
+    <dt>RoomID</dt>
+    <td>{{ booking.selected_room }}</td>
+    <dt>Customername</dt>
+    <td>{{ booking.customer_name }}</td>
+    <dt>Number Of People</dt>
+    <td>{{ booking.numberofpeople }}</td>
+    <dt>Nric</dt>
+    <td>{{ booking.customer_nric }}</td>
+    <dt>Phone-Number</dt>
+    <td>{{ booking.phonenumber }}</td>
+    <dt>Check-In-Date</dt>
+    <td>{{ booking.checkindate }}</td>    
+    <dt>Check-Out-Date</dt>
+    <td>{{ booking.checkoutdate }}</td>    
   </dl>
 </div>
 <div class="row">
   <div class="col-md-12">
     <a [routerLink]="['/booking-edit', booking._id]" class="btn btn-success">EDIT</a>
-    <button class="btn btn-danger" type="button" (click)="deleteSchedule(schedule._id)">DELETE</button>
+    <button class="btn btn-danger" type="button" (click)="deleteBooking(booking._id)">DELETE</button>
   </div>
 </div>

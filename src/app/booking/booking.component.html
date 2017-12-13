@@ -1,21 +1,26 @@
 <div class="container">
-  <h1>Booking Catalogue
+  <h1>Room Booking 
     <a [routerLink]="['/booking-create']" class="btn btn-default btn-lg">
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true">Make new Booking</span>
     </a>
   </h1>
   <table class="table">
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Action</th>
+        <th>room</th>
+        <th>name</th>
+        <th>Phone Number</th>
+        <th>Check-In Date</th>
+        <th>Check-Out Date</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let booking of bookings">
-        <td>{{ booking.title }}</td>
-        <td>{{ booking.author }}</td>
+        <td>{{ booking.roomid }}</td>
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.phone }}</td>
+        <td>{{ booking.checkindate }}</td>
+        <td>{{ booking.checkoutdate }}</td>
         <td><a [routerLink]="['/booking-details', booking._id]">Show Details</a></td>
       </tr>
     </tbody>
