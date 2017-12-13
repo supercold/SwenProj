@@ -26,7 +26,7 @@ export class StaffEditComponent implements OnInit {
     });
   }
 
-  updateStaffS(id) {
+  updateStaff(id) {
     this.staffService.updateStaff(id, this.staff).then((result) => {
       let id = result['_id'];
       this.router.navigate(['/staff-details', id]);
