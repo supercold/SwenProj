@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Edit Status</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateStatus(status._id)" #statusForm="ngForm">
+        <div class="form-group">
+          <label for="name">RoomID</label>
+          <input type="text" class="form-control" [(ngModel)]="status.RoomID" name="RoomID" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Occupancy</label>
+          <input type="text" class="form-control" [(ngModel)]="status.Occupancy" name="Occupancy" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!statusForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

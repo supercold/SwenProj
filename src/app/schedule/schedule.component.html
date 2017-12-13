@@ -7,15 +7,20 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Action</th>
+        <th>RoomID</th>
+        <th>In-Charge</th>
+        <th>Status</th>
+        <th>Cleaned Time</th>
+        <th>Do not disturb</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let schedule of schedules">
-        <td>{{ schedule.title }}</td>
-        <td>{{ schedule.author }}</td>
+        <td>{{ schedule.RoomID }}</td>
+        <td>{{ schedule.InCharge }}</td>
+        <td>{{ schedule.Status }}</td>
+        <td>{{ schedule.Cleanedtime }}</td>
+        <td>{{ schedule.donotdisturb }}</td>
         <td><a [routerLink]="['/schedule-details', schedule._id]">Show Details</a></td>
       </tr>
     </tbody>

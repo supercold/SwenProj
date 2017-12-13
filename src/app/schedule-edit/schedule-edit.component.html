@@ -3,26 +3,26 @@
   <div class="row">
     <div class="col-md-6">
       <form (ngSubmit)="updateSchedule(schedule._id)" #scheduleForm="ngForm">
-        <div class="form-group">
-          <label for="name">ISBN</label>
-          <input type="text" class="form-control" [(ngModel)]="schedule.isbn" name="isbn" required>
-        </div>
-        <div class="form-group">
-          <label for="name">Title</label>
-          <input type="text" class="form-control" [(ngModel)]="schedule.title" name="title" required>
-        </div>
-        <div class="form-group">
-          <label for="name">Author</label>
-          <input type="text" class="form-control" [(ngModel)]="schedule.author" name="author" required>
-        </div>
-        <div class="form-group">
-          <label for="name">Publisher</label>
-          <input type="text" class="form-control" [(ngModel)]="schedule.publisher" name="publisher" required>
-        </div>
-        <div class="form-group">
-          <label for="name">Price</label>
-          <input type="number" class="form-control" [(ngModel)]="schedule.price" name="price" required>
-        </div>
+          <div class="form-group">
+              <label for="name">RoomID</label>
+              <input type="text" class="form-control" [(ngModel)]="schedule.isbn" name="RoomID" required>
+            </div>
+            <div class="form-group">
+              <label for="name">In-Charge</label>
+              <input type="text" class="form-control" [(ngModel)]="schedule.title" name="InCharge" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Status</label>
+              <input type="text" class="form-control" [(ngModel)]="schedule.author" name="Status" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Cleaned Time</label>
+              <input type="text" class="form-control" [(ngModel)]="schedule.publisher" name="Cleanedtime" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Do Not Disturb</label>
+              <input type="text" class="form-control" [(ngModel)]="schedule.price" name="donotdisturb" required>
+            </div>
         <div class="form-group">
           <button type="submit" class="btn btn-success" [disabled]="!scheduleForm.form.valid">Update</button>
         </div>

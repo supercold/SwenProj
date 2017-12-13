@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>{{ yearly.Year }}</h1>
+  <dl class="list">
+      <dt>Year</dt>
+      <dd>{{ yearly.Year }}</dd>
+      <dt>RoomID</dt>
+      <dd>{{ yearly.RoomID }}</dd>
+      <dt>Occupancy</dt>
+      <dd>{{ yearly.Occupancy }}</dd>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/yearly-edit', yearly._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteYearly(yearly._id)">DELETE</button>
+  </div>
+</div>

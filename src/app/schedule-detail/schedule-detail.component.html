@@ -1,16 +1,16 @@
 <div class="container">
-  <h1>{{ schedule.title }}</h1>
+  <h1>Housekeeping Room: {{ schedule.RoomID }}</h1>
   <dl class="list">
-    <dt>ISBN</dt>
-    <dd>{{ schedule.isbn }}</dd>
-    <dt>Author</dt>
-    <dd>{{ schedule.author }}</dd>
-    <dt>Publisher</dt>
-    <dd>{{ schedule.publisher }}</dd>
-    <dt>Price</dt>
-    <dd>{{ schedule.price }}</dd>
-    <dt>Update Date</dt>
-    <dd>{{ schedule.updated_at }}</dd>
+    <dt>RoomID</dt>
+    <td>{{ schedule.RoomID }}</td>
+    <dt>In-Charge</dt>
+    <td>{{ schedule.InCharge }}</td>
+    <dt>Status</dt>
+    <td>{{ schedule.Status }}</td>    
+    <dt>Cleaned Time</dt>
+    <td>{{ schedule.Cleanedtime }}</td>
+    <dt>Do Not Disturb</dt>
+    <td>{{ schedule.donotdisturb }}</td>
   </dl>
 </div>
 <div class="row">
