@@ -1,21 +1,33 @@
-<nav class="navbar navbar-inverse" style = "background-color: Aqua">
+<nav class="navbar navbar-inverse" style = "background-color: rgb(136, 24, 67)">
+    
     <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#" >Hotel Management</a>
-      </div>
+        <div class="navbar-header">
+            <a href= "" routerLink = '/home'>
+              <img src = "./assets/logo.png" width="75" height="75">
+            </a>
+          </div>
       <ul class="nav navbar-nav">
-        <li><a >Home</a></li>
-        <li><a routerLink = '/bookings'>Booking</a></li>
-        <li><a routerLink = '/staffs'>Staff</a></li>
-        <li><a routerLink = '/schedules'>Housekeeping Schedule</a></li>
-        <li><a routerLink = '/reports'>Reports</a></li>
+        <li><a style="color:#18d8d8" routerLink = '/home'>Home</a></li>
+        <li><a style="color:#18d8d8" routerLink = '/rooms'>Rooms</a></li>
+        <li><a style="color:#18d8d8" routerLink = '/bookings'>Booking</a></li>
+        <li><a style="color:#18d8d8" routerLink = '/staffs'>Staff</a></li>
+        <li><a style="color:#18d8d8" routerLink = '/schedules'>Housekeeping Schedule</a></li>
+        <li class="dropdown"><a style="color:#18d8d8" class="dropdown-toggle" data-toggle="dropdown" > Reports <span class="caret"></span></a>
+          <ul class="dropdown-menu" style="background-color:#3152e2">
+              <li><a routerLink="/guests" style="font-size:20px"> Guest in Rooms </a></li>
+              <li><a routerLink="/statuss" style="font-size:20px"> Room Status </a></li>
+              <li><a routerLink="/housekeepings" style="font-size:20px"> Housekeeping </a></li>
+              <li><a routerLink="/roomoccupancy" style="font-size:20px"> Room Occupancys </a></li>
+          </ul>
+      </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#" routerLink = "/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" routerLink = "/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </nav>
+
   
 <div class="container">
   <div class="row">
